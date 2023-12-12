@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <rating-widget>
+        <h1>Rating Widget</h1>
+        <form action="https://httpbin.org/post" class="rating" method="POST">
+            <input type="radio" id="star5" name="rating" value="5" onclick="displayPositive()"/>
+            <label for="star5" title="text"></label>
+            <input type="radio" id="star4" name="rating" value="4" onclick="displayPositive()"/>
+            <label for="star4" title="text"></label>
+            <input type="radio" id="star3" name="rating" value="3" onclick="displayNegative()"/>
+            <label for="star3" title="text"></label>
+            <input type="radio" id="star2" name="rating" value="2" onclick="displayNegative()" />
+            <label for="star2" title="text"></label>
+            <input type="radio" id="star1" name="rating" value="1" onclick="displayNegative()"/>
+            <input type="hidden" name="sentBy" value="JS">
+            <label for="star1" title="text"></label>
+            <span id="message">hi</span>
+            <button type="submit" id="button">Submit</button>
+        </form>
+       <!--
+        
+       --> 
+    </rating-widget>
+	<script src="script.js"></script>
+    <noscript>
+        <form action="https://httpbin.org/post" method="POST">
+            <label for="rating">How satisfied are you?</label>
+            <input type="hidden" name="question" value="How satisfied are you?">
+            <input type="hidden" name="sentBy" value="HTML">
+            <input type="number" id="rating" name="rating" min="1" max="5" value="0" required>
+            <button type="submit">Submit</button>
+        </form>
+    </noscript>
+  </body>
+</html>
